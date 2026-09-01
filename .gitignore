@@ -1,0 +1,12 @@
+node_modules/
+build/
+.react-router/
+.DS_Store
+*.log
+.env
+.env.*
+.vercel/
+
+# Original create.xyz export, kept on disk for reference but not tracked.
+apps/
+shared/
