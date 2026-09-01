@@ -61,7 +61,7 @@ export function meta() {
     "Mobo Abayomi sits at the intersection of business, culture and technology — closing partnerships and building practical products, including The Dugout, an AI co-pilot for Fantasy Premier League.";
   const image =
     "https://ucarecdn.com/f6f2a998-2a8b-4cc8-99b4-dc4ca7851ed8/-/scale_crop/1200x630/center/-/format/jpeg/-/quality/smart/";
-  const url = "https://www.moboabayomi.com/";
+  const url = "https://moboabayomi.com/";
 
   return [
     { title },
