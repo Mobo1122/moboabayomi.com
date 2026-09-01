@@ -8,7 +8,7 @@ export function meta() {
   const description =
     "A running visual log of images that inform how I think about products, culture and aesthetics.";
   const image =
-    "https://ucarecdn.com/f6f2a998-2a8b-4cc8-99b4-dc4ca7851ed8/-/scale_crop/1200x630/center/-/format/jpeg/-/quality/smart/";
+    "https://moboabayomi.com/og.jpg";
   const url = "https://moboabayomi.com/moodboard";
 
   return [
