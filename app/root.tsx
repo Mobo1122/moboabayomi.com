@@ -18,6 +18,13 @@ export const links = () => [
     rel: 'stylesheet',
     href: 'https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap',
   },
+
+  // Favicons: a face-crop of the homepage portrait. The .ico bundles 16+32px
+  // for the many clients that request /favicon.ico by convention.
+  { rel: 'icon', href: '/favicon.ico', sizes: '32x32' },
+  { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16.png' },
+  { rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32.png' },
+  { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
 ];
 
 export function Layout({ children }: { children: ReactNode }) {
