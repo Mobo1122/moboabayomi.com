@@ -55,6 +55,27 @@ const apps = [
   },
 ];
 
+const lab = [
+  {
+    name: "TRADING DESK",
+    tagline: "An options trading desk staffed by AI agents.",
+    description:
+      "A scanner finds setups, a strategist builds the options trade, a risk agent checks it against hard limits — Greeks exposure, margin, a circuit breaker and a kill switch — and an executor places it with Interactive Brokers. Before anything goes live, it messages me in Slack with the trade and the reasoning, and I approve or reject it with one tap. Anything I don't answer times out to a no.",
+    status: "Open source",
+    link: "https://github.com/Mobo1122/trading",
+    linkLabel: "View on GitHub",
+  },
+  {
+    name: "YOUTUBE STUDIO",
+    tagline: "A YouTube network that runs itself.",
+    description:
+      "Four channels — true crime, history, mythology and philosophy — each with its own brand: a narrator voice, a thumbnail style and a title format. The system plans the content calendar, researches and writes long-form scripts, voices them, designs thumbnails, assembles the video and publishes on schedule, with a quality agent reviewing each episode and automatic retries when a step fails. It reports to me in Slack and sends a weekly digest, and I run it from a web UI.",
+    status: "Running",
+    link: "https://github.com/Mobo1122/Youtube",
+    linkLabel: "View on GitHub",
+  },
+];
+
 export function meta() {
   const title = "Mobo Abayomi — Creative generalist";
   const description =
@@ -269,6 +290,47 @@ export default function HomePage() {
                     )}
                   </div>
                 </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Lab - experiments, smaller than apps */}
+          <div className="mt-48 mb-20">
+            <div className="text-[10px] uppercase tracking-[0.4em] text-black/30 mb-6 font-medium">
+              Experiments
+            </div>
+            <h2 className="text-[clamp(2rem,6vw,5rem)] font-black leading-[0.9] tracking-tight text-black">
+              LAB
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-20">
+            {lab.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="border-l-2 border-black/20 pl-12 space-y-6"
+              >
+                <div className="text-[10px] uppercase tracking-[0.3em] font-medium text-black/30">
+                  {item.status}
+                </div>
+                <h3 className="text-4xl md:text-5xl font-black tracking-tight text-black">
+                  {item.name}
+                </h3>
+                <p className="text-lg font-bold text-black/60">{item.tagline}</p>
+                <p className="text-base leading-relaxed text-black/50 font-light">
+                  {item.description}
+                </p>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-black font-bold hover:opacity-60 transition-opacity text-xs uppercase tracking-[0.2em]"
+                >
+                  {item.linkLabel} <ArrowRight size={16} />
+                </a>
               </motion.div>
             ))}
           </div>
